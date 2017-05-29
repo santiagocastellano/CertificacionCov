@@ -1,6 +1,10 @@
 /*
- * Un retorno covariante es la posibilidad de retornar en un metodo un subtipo 
-    de la clase o tipo primitivo declarado como devolucion del metodo
+ *  Como se sabe, en java pueden declararse metodos que retornan valores cuyos tipos deben definirse
+    en la firma. Una de las reglas principales es que el tipo de retorno debe si o si coincidir con
+    el declarado en la firma del metodo, no obstante java cuenta con la posibilidad de quebrar esta regla,
+    a esto se le llama retorno covariante.
+    Un retorno covariante es la posibilidad de retornar en un metodo un subtipo 
+    de la clase o tipo primitivo declarado como devolucion del metodo.
  */
 package retorno_covariante;
 
@@ -9,6 +13,11 @@ package retorno_covariante;
  * @author santi
  */
 public class Covariante {
+    //ejemplo de un retorno convencional
+    public int devuelvoEntero(){
+        int a=27;
+        return a;
+    }
     /*  ejemplo de un retorno covariante, se puede retornar un subtipo del objeto de retorno.
         En este ejemplo -retornoCovariante()- se utiliza una interface como definicion de tipo, 
         la InterfaceCov es padre de InterCovHija, la implementacion de dicha interface se 
